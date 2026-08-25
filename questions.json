@@ -1,0 +1,374 @@
+[
+  {
+    "id": "q001",
+    "difficulty": "A",
+    "category": "次の発言",
+    "script": [
+      [
+        "Man",
+        "I forgot my umbrella, and it has started raining."
+      ],
+      [
+        "Woman",
+        "Oh no. I have an extra one in my bag."
+      ],
+      [
+        "Man",
+        "Really?"
+      ]
+    ],
+    "question": "What will the woman probably say next?",
+    "choices": [
+      "You can borrow it.",
+      "The weather was sunny yesterday.",
+      "I bought new shoes.",
+      "I don't like buses."
+    ],
+    "answer": 0,
+    "evidence": "I have an extra one in my bag.",
+    "trap": "会話の話題は雨と傘。直前の提案につながる返答を選ぶ。",
+    "key": "borrow = 借りる",
+    "strategy": "次の発言問題は『直前の発言への自然な返答』を最優先。"
+  },
+  {
+    "id": "q002",
+    "difficulty": "B",
+    "category": "情報変更",
+    "script": [
+      [
+        "Woman",
+        "Let's meet at the library at two."
+      ],
+      [
+        "Man",
+        "I have soccer practice until two."
+      ],
+      [
+        "Woman",
+        "Then how about three? "
+      ],
+      [
+        "Man",
+        "Three is fine."
+      ]
+    ],
+    "question": "What time will they meet?",
+    "choices": [
+      "1:00",
+      "2:00",
+      "3:00",
+      "4:00"
+    ],
+    "answer": 2,
+    "evidence": "Then how about three? — Three is fine.",
+    "trap": "最初に出た2時をそのまま選ばない。",
+    "key": "Then how about ...? = では…はどう？",
+    "strategy": "最初の予定ではなく、最後に合意した時刻を取る。"
+  },
+  {
+    "id": "q003",
+    "difficulty": "A",
+    "category": "場所",
+    "script": [
+      [
+        "Man",
+        "Where is your sister?"
+      ],
+      [
+        "Woman",
+        "She was in the living room, but now she's making dinner."
+      ],
+      [
+        "Man",
+        "Oh, I see."
+      ]
+    ],
+    "question": "Where is the sister probably now?",
+    "choices": [
+      "In the bedroom",
+      "In the kitchen",
+      "In the garden",
+      "In the bathroom"
+    ],
+    "answer": 1,
+    "evidence": "now she's making dinner.",
+    "trap": "was in the living room は過去情報。",
+    "key": "now = 今",
+    "strategy": "場所問題では時制と now / still / already に注意。"
+  },
+  {
+    "id": "q004",
+    "difficulty": "B",
+    "category": "時刻",
+    "script": [
+      [
+        "Woman",
+        "The museum opens at nine."
+      ],
+      [
+        "Man",
+        "We need to arrive thirty minutes early."
+      ],
+      [
+        "Woman",
+        "The bus ride takes one hour, and it takes me fifteen minutes to walk to the bus stop."
+      ]
+    ],
+    "question": "By what time should the woman leave home?",
+    "choices": [
+      "7:00",
+      "7:15",
+      "7:30",
+      "8:00"
+    ],
+    "answer": 1,
+    "evidence": "Meet by 8:30; 1 hour bus + 15 minutes walk = leave home by 7:15.",
+    "trap": "開館9時から直接1時間だけ引かない。集合30分前と徒歩15分も必要。",
+    "key": "thirty minutes early = 30分早く",
+    "strategy": "到着目標 → 移動時間 → 徒歩時間の順に逆算。"
+  },
+  {
+    "id": "q005",
+    "difficulty": "B",
+    "category": "金額",
+    "script": [
+      [
+        "Man",
+        "Tickets are twenty dollars each."
+      ],
+      [
+        "Woman",
+        "We need three, but students get five dollars off each ticket."
+      ],
+      [
+        "Man",
+        "Great."
+      ]
+    ],
+    "question": "How much will they pay in total?",
+    "choices": [
+      "$35",
+      "$40",
+      "$45",
+      "$60"
+    ],
+    "answer": 2,
+    "evidence": "(20 - 5) × 3 = 45.",
+    "trap": "割引を1枚だけに適用しない。",
+    "key": "get five dollars off = 5ドル引き",
+    "strategy": "単価を確定してから個数を掛ける。"
+  },
+  {
+    "id": "q006",
+    "difficulty": "A",
+    "category": "した・しなかった",
+    "script": [
+      [
+        "Woman",
+        "Did you enjoy your holiday?"
+      ],
+      [
+        "Man",
+        "Yes. We went hiking and swimming. We planned to rent bicycles, but the shop was closed."
+      ]
+    ],
+    "question": "What did the man NOT do?",
+    "choices": [
+      "Hiking",
+      "Swimming",
+      "Cycling",
+      "Traveling"
+    ],
+    "answer": 2,
+    "evidence": "We planned to rent bicycles, but the shop was closed.",
+    "trap": "planned to は『した』ではない。",
+    "key": "planned to = する予定だった",
+    "strategy": "did / didn't と plan / want / hope を区別する。"
+  },
+  {
+    "id": "q007",
+    "difficulty": "B",
+    "category": "最終決定",
+    "script": [
+      [
+        "Man",
+        "I want the chicken."
+      ],
+      [
+        "Woman",
+        "Sorry, we're out of chicken."
+      ],
+      [
+        "Man",
+        "Then I'll take the fish."
+      ],
+      [
+        "Woman",
+        "Would you like fries with that?"
+      ],
+      [
+        "Man",
+        "No, vegetables, please."
+      ]
+    ],
+    "question": "What will the man have?",
+    "choices": [
+      "Chicken with fries",
+      "Chicken with vegetables",
+      "Fish with fries",
+      "Fish with vegetables"
+    ],
+    "answer": 3,
+    "evidence": "Then I'll take the fish. / No, vegetables, please.",
+    "trap": "最初の希望 chicken を残さない。",
+    "key": "we're out of ... = …を切らしている",
+    "strategy": "注文問題は『最終確定した主菜＋付け合わせ』を分けて追う。"
+  },
+  {
+    "id": "q008",
+    "difficulty": "A",
+    "category": "理由",
+    "script": [
+      [
+        "Woman",
+        "Why were you late?"
+      ],
+      [
+        "Man",
+        "The train was on time, but I overslept and left home late."
+      ]
+    ],
+    "question": "Why was the man late?",
+    "choices": [
+      "The train was late.",
+      "He overslept.",
+      "There was traffic.",
+      "He missed the bus."
+    ],
+    "answer": 1,
+    "evidence": "I overslept and left home late.",
+    "trap": "train が出てくるが on time なので原因ではない。",
+    "key": "oversleep = 寝過ごす",
+    "strategy": "Why は『原因を直接示す文』を取る。"
+  },
+  {
+    "id": "q009",
+    "difficulty": "B",
+    "category": "数量",
+    "script": [
+      [
+        "Woman",
+        "Ten people are coming."
+      ],
+      [
+        "Man",
+        "We need one bottle of juice for every two people."
+      ],
+      [
+        "Woman",
+        "Each bottle costs six dollars."
+      ]
+    ],
+    "question": "How much will the juice cost?",
+    "choices": [
+      "$24",
+      "$30",
+      "$36",
+      "$60"
+    ],
+    "answer": 1,
+    "evidence": "10 people ÷ 2 = 5 bottles; 5 × 6 = 30.",
+    "trap": "10本必要だと誤解しない。",
+    "key": "for every two people = 2人につき",
+    "strategy": "人数 → 必要個数 → 金額の順に計算。"
+  },
+  {
+    "id": "q010",
+    "difficulty": "A",
+    "category": "否定",
+    "script": [
+      [
+        "Man",
+        "Are you moving your desk?"
+      ],
+      [
+        "Woman",
+        "No. I'll paint the walls and put up new pictures, but I won't move any furniture."
+      ]
+    ],
+    "question": "What will the woman NOT do?",
+    "choices": [
+      "Paint the walls",
+      "Put up pictures",
+      "Move furniture",
+      "Change the room"
+    ],
+    "answer": 2,
+    "evidence": "I won't move any furniture.",
+    "trap": "change the room は全体の目的。具体的否定を優先。",
+    "key": "won't = will not",
+    "strategy": "NOT問題では否定語を聞いた瞬間に選択肢と結びつける。"
+  },
+  {
+    "id": "q011",
+    "difficulty": "B",
+    "category": "情報変更",
+    "script": [
+      [
+        "Man",
+        "At first, I wanted to buy the red bag."
+      ],
+      [
+        "Woman",
+        "But the red one is too small."
+      ],
+      [
+        "Man",
+        "You're right. I'll get the larger blue one instead."
+      ]
+    ],
+    "question": "Which bag will the man buy?",
+    "choices": [
+      "A small red bag",
+      "A large red bag",
+      "A small blue bag",
+      "A large blue bag"
+    ],
+    "answer": 3,
+    "evidence": "I'll get the larger blue one instead.",
+    "trap": "At first の直後を答えない。",
+    "key": "instead = 代わりに",
+    "strategy": "at first → but → instead は典型的な情報更新セット。"
+  },
+  {
+    "id": "q012",
+    "difficulty": "A",
+    "category": "内容一致",
+    "script": [
+      [
+        "Woman",
+        "The school festival is on Saturday."
+      ],
+      [
+        "Man",
+        "It starts at ten and ends at four."
+      ],
+      [
+        "Woman",
+        "Students can enter for free, but adults pay five dollars."
+      ]
+    ],
+    "question": "Which statement is true?",
+    "choices": [
+      "The festival is on Sunday.",
+      "It ends at five.",
+      "Students pay five dollars.",
+      "Students can enter for free."
+    ],
+    "answer": 3,
+    "evidence": "Students can enter for free.",
+    "trap": "数字や曜日のすり替えに注意。",
+    "key": "for free = 無料で",
+    "strategy": "内容一致は1選択肢ずつ本文と照合。"
+  }
+]

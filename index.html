@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#111827" />
+  <title>早稲渋 Listening Trainer</title>
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <div class="eyebrow">早稲渋対策</div>
+      <h1>Listening Trainer</h1>
+    </div>
+    <button id="installBtn" class="ghost hidden">ホーム画面に追加</button>
+  </header>
+
+  <main class="container">
+    <section id="homeView" class="view active">
+      <div class="hero card">
+        <div>
+          <div class="badge" id="levelBadge">習熟度を計算中…</div>
+          <h2>今日の目標</h2>
+          <p id="todayGoal">A問題を落とさず、弱点を1つ改善する。</p>
+        </div>
+        <div class="score-ring" id="overallRing">
+          <span id="overallMastery">0%</span>
+        </div>
+      </div>
+
+      <div class="grid two">
+        <button class="menu card primary" data-mode="daily">
+          <span class="icon">▶</span>
+          <span>
+            <strong>今日の10問</strong>
+            <small>習熟度に合わせて自動出題</small>
+          </span>
+        </button>
+        <button class="menu card" data-mode="weak">
+          <span class="icon">🎧</span>
+          <span>
+            <strong>弱点復習</strong>
+            <small>苦手カテゴリを優先</small>
+          </span>
+        </button>
+        <button class="menu card" data-mode="ab">
+          <span class="icon">A/B</span>
+          <span>
+            <strong>60点確保モード</strong>
+            <small>A中心 → Bへ段階移行</small>
+          </span>
+        </button>
+        <button class="menu card" data-mode="timeMoney">
+          <span class="icon">⏱</span>
+          <span>
+            <strong>時刻・金額</strong>
+            <small>計算系を集中練習</small>
+          </span>
+        </button>
+      </div>
+
+      <section class="card">
+        <div class="section-head">
+          <h3>現在の習熟度</h3>
+          <button id="resetBtn" class="text-btn">学習履歴をリセット</button>
+        </div>
+        <div id="skillList" class="skill-list"></div>
+      </section>
+
+      <section class="card strategy" id="strategyCard"></section>
+    </section>
+
+    <section id="quizView" class="view">
+      <div class="quiz-head">
+        <button id="backHomeBtn" class="ghost">← 終了</button>
+        <div id="progressText">1 / 10</div>
+      </div>
+
+      <div class="card question-card">
+        <div class="row between wrap">
+          <div>
+            <span class="pill" id="difficultyPill">A</span>
+            <span class="pill subtle" id="categoryPill">次の発言</span>
+          </div>
+          <span id="listenCount" class="muted">再生 0 / 1</span>
+        </div>
+
+        <button id="listenBtn" class="listen-btn">
+          <span class="speaker">🔊</span>
+          <span>LISTEN</span>
+        </button>
+
+        <p class="question" id="questionText"></p>
+        <div id="choices" class="choices"></div>
+
+        <div id="feedback" class="feedback hidden"></div>
+      </div>
+    </section>
+
+    <section id="resultView" class="view">
+      <div class="card result-card">
+        <div class="result-score" id="resultScore">0 / 10</div>
+        <h2 id="resultTitle">今回の結果</h2>
+        <div id="resultBreakdown"></div>
+        <div id="resultAdvice" class="advice"></div>
+        <button id="resultHomeBtn" class="primary-btn">ホームへ戻る</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
